@@ -87,3 +87,45 @@ ar_lin=np.linspace(0,20,5) # 5 values equally spaced between 0 and 20
 print(ar_lin)
 
 #Lecture 5
+#creat numpy arrays with random numbers
+# 1. random array elements between 0 and 1
+import numpy as np
+ar_rand=np.random.rand(5) # 1D array with 5 random elements
+print(ar_rand)
+ar_rand2=np.random.rand(2,3) # 2D array with 2 rows and 3 columns
+print(ar_rand2)
+# 2. generate ramndom value close tozero. this may be positive or negative.
+ar_randn=np.random.randn(5) # 1D array with 5 random elements
+print(ar_randn)
+# 3.doing random sampling, it return an array of specified shape and fills it with random floats in the half-open interval [0.0, 1.0).
+ar_randf=np.random.ranf((2,3)) 
+print(ar_randf)
+# 4.generate a random number between a given range
+ar_randint=np.random.randint(1,10,5) # 5 random integers between 1 and 10
+print(ar_randint)
+
+# Lecture 6
+# Data types in numpy array
+# find data type of array elements
+import numpy as np
+var=np.array([2,3,5,6])
+print("data type: ",var.dtype)# .dtype is used to find data type of array elements. 
+var1=np.array([1.2,4.5,3.4,5.2])
+print("data type: ",var1.dtype)
+var2=np.array(["a","b","h","d"])
+print("data type: ",var2.dtype)
+var3=np.array(["a","b","h","r",[1,3,5,6]],dtype=object)
+print("data type: ",var3.dtype)
+# conversion of data type
+x=np.array([1,2,3,4],dtype=np.float64)# here we are converting integer array to float array.
+print(x)
+x1=np.array([1,2,3,4],dtype="uint32")# converting integer into unsighned integer.
+# conversion of datatypes as a function.
+x1=np.array([1,2,3,4])
+new=np.float64(x1)
+print("data type: ",x1.dtype)
+print("data type: ",new.dtype)
+print(x1)
+print(new)
+
+

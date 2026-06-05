@@ -128,4 +128,31 @@ print("data type: ",new.dtype)
 print(x1)
 print(new)
 
+# Lecture 7
+#Arithmetic operations in numpy array
+# for 1D array
+import numpy as np
+var=np.array([1,2,3,4])
+var_add1=var+3 # here we are adding 3 to each element of the array. this is called broadcasting in numpy.
+var_add2=var-3
+var_add3=var*3
+var_add4=var/3
+print(var_add1)
+print(var_add2)
+print(var_add3)
+print(var_add4)
+
+var1=np.array([1,2,3,4])
+var2=np.array([1,2,3,4])
+var_add=var1+var2 #here we are adding two arrays element-wise. this is also called broadcasting in numpy.
+var_add=np.add(var1,var2) # addition of two arrays using numpy function.
+print(var_add)
+print(var_add)
+# for 2D array
+var1=np.array([[1,2,3,4],[1,2,3,4]])
+var2=np.array([[1,3,5,6],[1,3,5,7]])
+var_multiply=var1*var2
+print(var_multiply)
+
+
 

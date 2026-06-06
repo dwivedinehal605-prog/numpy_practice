@@ -154,5 +154,37 @@ var2=np.array([[1,3,5,6],[1,3,5,7]])
 var_multiply=var1*var2
 print(var_multiply)
 
+# Lecture 8
+# Arithmetic functions in numpy array
+import numpy as np
+var=np.array([1,4,3,9])
+print("max: ",np.max(var),np.argmax (var)) # find maximum element in the array and its index.
+print("min: ",np.min(var),np.argmin(var)) # find minimum element in the array and its index.
+print("sqrt: ",np.sqrt(var)) # find square root of each element in the array.
+# for 2D array
+var2=np.array([[4,7,1],[5,8,7]])
+print("min value along column: ",np.min(var2,axis=0)) # find minimum element in each column.
+print("min value along row: ",np.min(var2,axis=1)) # find minimum element in each row.
+var3=np.array([4,6,2,7])
+print("sin value: ",np.sin(var3)) # find sine value of each element in the array.
+print("cos value: ",np.cos(var3)) # find cosine value of each element in the array.
+print("cumulative sum: ",np.cumsum(var3)) # find cumulative sum of the array elements.
+
+# Lecture 9
+# Shape and Reshaping of numpy array
+import numpy as np
+var=np.array([[1,2,3],[4,5,6]])
+print(var)
+print("shape: ",var.shape) # find shape of the array.
+var1=np.array([1,2,3,4,5,6],ndmin=4) # here we are creating a 4D array with 6 elements.
+print(var1)
+print(var1.ndim) # find dimension of the array.
+var=np.array([4,6,3,9,5,7])
+print(var.ndim)
+var2=var.reshape(3,2) # here we are reshaping the array from 2D to 3D. the total number of elements should be same.
+print("reshaped array: ",var2)
+print(var2.ndim)
+
+
 
 

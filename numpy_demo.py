@@ -185,6 +185,18 @@ var2=var.reshape(3,2) # here we are reshaping the array from 2D to 3D. the total
 print("reshaped array: ",var2)
 print(var2.ndim)
 
+# Lecture 10
+# Broadcasting in numpy array
+import numpy as np
+var1=np.array([1,2,3,4])
+var2=np.array([1,2,3,4])
+var_add=var1+var2 # here we are adding two arrays element-wise. this is called broadcasting in numpy.
+print(var_add)
+
+
+
+
+
 
 
 

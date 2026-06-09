@@ -191,12 +191,43 @@ import numpy as np
 var1=np.array([1,2,3,4])
 var2=np.array([1,2,3,4])
 var_add=var1+var2 # here we are adding two arrays element-wise. this is called broadcasting in numpy.
-print(var_add)
+print("1st array: ",var1)
+print("2nd array: ",var2)
+print("sum of both array: ",var_add)
 
-
-
-
-
-
-
-
+# Lecture 11
+# Numpy arrays indexing and slicing
+#INDEXING
+# 1. for 1D array
+import numpy as np
+var=np.array([1,2,3,4,5])
+# indexing    0,1,2,3,4
+# -ive indexing -5,-4,-3,-2,-1
+print("1D array: ",var)
+print("value of index 3: ",var[3]) # access fourth element of the array.
+print("value of index -3: ",var[-3]) # access third element of the array.
+# 2. for 2D array
+var2=np.array([[1,2,3],[4,5,6]])
+print("2D array: ",var2)
+print("value of index [0][2]: ",var2[0][2]) # access first row and third column element of the array.
+print("value of index [1][0]: ",var2[1][0]) # access second row and first column element of the array.
+# 3. for 3D array
+var=np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+print("3D array: ",var)
+print("value of [0,1,1]: ",var[0,1,1]) # access first block, second row and second column element of the array.
+print("value of [1,0,2]: ",var[1,0,2]) # access second block, first row and third column element of the array.
+#SLICING
+#Parameter for slicing is [start:stop:step]
+# 1. for 1D array
+var=np.array([1,2,3,4,5])
+# index no.   0,1,2,3,4
+print("1D array: ",var)
+print("slicing from index 1 to 4: ",var[1:4]) # access elements from index 1 to 3.
+print("slicing from start to end: ",var[:]) # access all elements of the array.
+print("slicing with step size 2: ",var[::2]) # access elements with step size 2.
+# 2. for 2D array
+var2=np.array([[1,2,3,5,8],[4,5,6,7,9]])
+print("2D array: ",var2)
+print("slicing second row: ",var2[1,:]) # access all columns of the second row.
+print("slicing first column: ",var2[:,0]) # access all rows of the first column.
+print("get subarray by slicing: ",var2[0:2,1:4]) # access first two rows and columns from index 1 to 3.

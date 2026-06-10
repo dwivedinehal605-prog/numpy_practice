@@ -261,3 +261,17 @@ print("iterate with index by using ndenumerate function")
 for i,d in np.ndenumerate(var2): # here we are iterating through each element of the array with its index by using ndenumerate function.
     print(i,d) # i is the index and d is the value of the element at that index.
 
+# Lecture 13
+#copy vs view in numpy array
+import numpy as np
+var=np.array([1,2,3,4,5])
+co=var.copy() # here we are creating a copy of the array. it is a new array with same values as original array but it is stored in different memory location. any change in copy array will not affect original array.
+var[1]=100
+print("original array: ",var)
+print("copy of the original array: ",co) # here we are creating a copy of the array. it is a new array with same values as original array but it is stored in different memory location. any change in copy array will not affect original array.
+
+x=np.array([1,2,3,4,5])
+vi=x.view() # here we are creating a view of the array. it is not a new array but it is just a reference to the original array. any change in view array will affect original array.
+x[1]=200
+print("original array: ",x)
+print("view of the original array: ",vi) # here we are creating a view of the array. it is not a new array but it is just a reference to the original array. any change in view array will affect original array.

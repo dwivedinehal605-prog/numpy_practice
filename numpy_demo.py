@@ -231,3 +231,33 @@ print("2D array: ",var2)
 print("slicing second row: ",var2[1,:]) # access all columns of the second row.
 print("slicing first column: ",var2[:,0]) # access all rows of the first column.
 print("get subarray by slicing: ",var2[0:2,1:4]) # access first two rows and columns from index 1 to 3.
+
+# Lecture 12
+# Numpy iteration arrays (nditer function)
+# 1. for 1D array
+import numpy as np
+var=np.array([3,4,7,9,2,8])
+print("1D array: ",var)
+print("print iteration of 1D array")
+for i  in var: 
+    print(i) # here we are iterating through each element of the array.   
+# 2. for 2D array
+var2=np.array([[1,2,3],[4,5,6]])
+print("2D array: ",var2)
+print("print iteration of 2D array through each row")
+for i in var2:
+    print(i) # here we are iterating through each row of the array. 
+
+print("print iteration of 2D array through each element")
+for k in var2:
+    for j in k:
+        print(j) # here we are iterating through each element of the array. 
+
+print("iterate again by using nditer function")
+for i in np.nditer(var2): # here we are iterating through each element of the array by using nditer function. it is more efficient than nested for loop.
+        print(i)
+
+print("iterate with index by using ndenumerate function")
+for i,d in np.ndenumerate(var2): # here we are iterating through each element of the array with its index by using ndenumerate function.
+    print(i,d) # i is the index and d is the value of the element at that index.
+

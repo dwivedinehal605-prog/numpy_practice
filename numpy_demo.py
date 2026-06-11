@@ -342,3 +342,43 @@ print("2D array: ",var)
 ar=np.array_split(var,2)
 ar=np.array_split(var,2,axis=1) #split along axis.
 print("splite 2D array along axis: ",ar)
+print()
+
+# Lecture 15
+# Numpy arrays function.
+# 1. Search(search an array for a certain value, and return the indexes that get a match)
+import numpy as np
+var=np.array([3,5,7,8,7,9])
+print("array: ",var)
+x=np.where(var==7) # here it will find 7 and return it's index value.
+print("search 7: ",x)
+print()
+# 2. Search sorted array(it performs a binary search in the array, and returns the index where the specified value would be inserted to maintain the search order.)
+var1=np.array([2,4,6,7,8,9])
+print("array: ",var1)
+x1=np.searchsorted(var1,3) # it will return the index value of where 3 will insert so that it would be in sorted order.
+x2=np.searchsorted(var1,[1,3,5],side="right")
+print("give index value of [3]: ",x1)
+print("give index value of [1,3,5]: ",x2)
+print()
+# 3. sort(Ordered sequence is any sequence that has an order corresponding to elements, like numeric or alphabetical,ascending or descending.)
+var2=np.array([2,4,1,6,7,8,5,13,9])
+print("array: ",var2)
+print("sorted array: ", np.sort(var2))
+
+var3=np.array(["f","j","a","t","c","e"])
+print("array: ",var3)
+print("sorted array: ", np.sort(var3))
+print()
+
+var2=np.array([[2,4,1,6],[7,8,5,13]])
+print("2D array: ",var2)
+print("sorted 2D array: ", np.sort(var2))
+print()
+# 4. Filter array(Getting some elements out of an existing array and creating a new array out of then)
+var4=np.array(["f","t","a","r","c","y"])
+print("array: ",var4)
+f=[True,False,True,True,False,False]
+new_var4=var4[f]
+print("Filtered array: ",new_var4)
+print(type(new_var4))

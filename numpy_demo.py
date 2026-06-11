@@ -275,3 +275,70 @@ vi=x.view() # here we are creating a view of the array. it is not a new array bu
 x[1]=200
 print("original array: ",x)
 print("view of the original array: ",vi) # here we are creating a view of the array. it is not a new array but it is just a reference to the original array. any change in view array will affect original array.
+print()
+# Lecture 14
+# Join and splint functions of numpy array.
+# Join array
+# 1. for 1D array
+import numpy as np
+var1=np.array([3,4,6,9])
+var2=np.array([6,2,8,1])
+ar=np.concatenate((var1,var2))
+print("var1: ",var1)
+print("var2 :",var2)
+print("concatination: ",ar)
+print()
+# 2. for 2D array
+var1=np.array([[3,4,6,9],[5,6,9,3]])
+var2=np.array([[6,2,8,1],[5,2,8,5]])
+ar=np.concatenate((var1,var2))
+print("var1: ",var1)
+print("var2 :",var2)
+print("concatination along with both row and colunm: ",ar) # here it concatenate along with axis-0(colunm) and axis-1(row) of array.
+print()
+
+var1=np.array([[3,4,6,9],[5,6,9,3]])
+var2=np.array([[6,2,8,1],[5,2,8,5]])
+ar=np.concatenate((var1,var2),axis=1)# it will concatenate along with row.
+print("var1: ",var1)
+print("var2 :",var2)
+print("concatenate along with row: ",ar)
+print()
+
+var1=np.array([[3,4,6,9],[5,6,9,3]])
+var2=np.array([[6,2,8,1],[5,2,8,5]])
+ar=np.concatenate((var1,var2),axis=0)# it will concatenate along with colunm.
+print("var1: ",var1)
+print("var2 :",var2)
+print(" concatenate along with colunm: ",ar)
+print()
+# merging array using stack function.
+var1=np.array([[3,4,6,9],[5,6,9,3]])
+var2=np.array([[6,2,8,1],[5,2,8,5]])
+ar1=np.stack((var1,var2))# merge along both row and colunm.
+ar2=np.hstack((var1,var2))# merge along row.
+ar3=np.vstack((var1,var2))# merge along colunm.
+ar4=np.dstack((var1,var2))# merge along height.
+print("var1: ",var1)
+print("var2 :",var2)
+print("merge array by using stack function: ",ar1)
+print("merge array horizontally(row): ",ar2)
+print("merge array vertically(colunm): ",ar3)
+print("merge array along with height: ",ar4)
+print()
+#Splint array
+# 1. 1D array
+import numpy as np
+var=np.array([4,6,9,3])
+print("1D array: ",var)
+ar=np.array_split(var,2)
+print("splited array: ",ar)
+print("datatype of splited array: ",type(ar))
+print("access specified array[1]: ",ar[1])
+print()
+# 2. for 2D array
+var=np.array([[3,4,5,6],[8,9,1,2]])
+print("2D array: ",var)
+ar=np.array_split(var,2)
+ar=np.array_split(var,2,axis=1) #split along axis.
+print("splite 2D array along axis: ",ar)

@@ -382,3 +382,46 @@ f=[True,False,True,True,False,False]
 new_var4=var4[f]
 print("Filtered array: ",new_var4)
 print(type(new_var4))
+print()
+
+# Lecture 16
+# Numpy array functions(shuffle,unique,resize,flatten,ravel)
+# 1. Shuffle
+import numpy as np
+var=np.array([3,4,5,6,7])
+print("array: ",var)
+np.random.shuffle(var)
+print("shuffled array: ",var)
+# 2. Unique
+var=np.array([3,4,3,5,4,6,5,1,1,7])
+print("array: ",var)
+x=np.unique(var) #it will return unique values.
+print("unique element of array: ",x)
+print()
+x1=np.unique(var,return_index=True)
+print("index of unique element: ",x1)
+print()
+x2=np.unique(var,return_counts=True)
+print("count repitition of unique element: ",x2)
+print()
+# 3.Resize
+var1=np.array([3,4,3,5,4,6,5,1,1])
+print("array: ",)
+x=np.resize(var1,(3,3))
+print("Resized array: ",x)
+print()
+# 4. Flatten(convert nD array into 1D array)
+var1=np.array([[3,4,3],[5,4,6],[5,1,1]])
+print("array: ",var1)
+print("flattened array: ",var1.flatten()) # it will convert nD array into 1D array.
+print("flattened array in C-style(row): ",var1.flatten(order="C")) # "C" means to flatten in row major(C-style) order.
+print("flattened array in fortan style(column) : ",var1.flatten(order="F")) #"F" means to flatten in coumn major(fortan style) order 
+print()
+# 5. Ravel(converts nD array into 1D array)
+var2=np.array([[3,4,3],[5,4,6],[5,1,1]])
+print("array: ",var2)
+print("Ravel: ",np.ravel(var2))
+print("Ravel order 'A': ",np.ravel(var2,order="A"))
+print("Ravel order 'F': ",np.ravel(var2,order="F"))
+print("Ravel order 'K': ",np.ravel(var2,order="K"))
+print("Ravel order 'C': ",np.ravel(var2,order="C"))

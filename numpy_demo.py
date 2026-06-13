@@ -472,3 +472,64 @@ var=np.array([4,5,8,2,5])
 print("1D array: ",var)
 d=np.delete(var,2)
 print("delete perticular value from array:",d)
+print()
+
+# Lecture 18.
+# Concept of matrix in numpy arrays in python.
+import numpy as np
+var=np.matrix([[1,2,3],[4,5,6]])
+print("matrix: ",var)
+print(type(var))
+print()
+
+var1=np.array([[1,2,3],[4,5,6]])
+print("array: ",var1)
+print(type(var1))
+print()
+
+var_1=np.matrix([[1,2],[4,5]])
+var_2=np.matrix([[7,9],[3,7]])
+print("first matrix: ",var_1)
+print("second matrix: ",var_2)
+print("addition of matrices: ",var_1+var_2) # addition of matrix
+print("multiplication of matrices: ",var_1*var_2) # multiplication of matrix
+# Matrix function in numpy array
+# 1. Transpose
+import numpy as np
+var=np.matrix([[1,2,3],[4,5,6]])
+print("matrix: ",var)
+print("Transpose of matrix: ",np.transpose(var))
+# 2. Swapaxes(same as transport)
+import numpy as np
+var = np.matrix([[1,2],[4,5]])
+print("matrix:", var)
+print("swapaxes of matrix:", np.swapaxes(var, 0, 1))
+print()
+
+var2 = np.matrix([[1,2],[3,4]])
+print(var2)
+print("swapaxes of matrix:", np.swapaxes(var2, 0, 1))
+
+# 3. Inverse matrix
+var = np.matrix([[2,3],[5,6]])
+print("matrix:", var)
+print("inverse of matrix:", np.linalg.inv(var))
+print()
+# 4. Power (np.linalg.matrix_power(matrixname,n)) where n<0(inverse*power),n>0(power multiply),n=0(identity matrix)
+var = np.matrix([[2,3],[5,6]])
+print("matrix:", var)
+print("power of matrix when n>0: ",np.linalg.matrix_power(var,2)) # n>0
+print("power of matrix when n=0: ",np.linalg.matrix_power(var,0)) # n=0
+print("power of matrix when n<0: ",np.linalg.matrix_power(var,-2)) #n<0
+print()
+# 5.Determinant(np.linalg.det(matrixname))
+var = np.matrix([[2,3,4],[5,6,9],[1,5,3]])
+print("matrix:", var)
+print("determinant of matrix: ",np.linalg.det(var))
+
+
+
+
+
+
+

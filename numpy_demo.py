@@ -425,3 +425,50 @@ print("Ravel order 'A': ",np.ravel(var2,order="A"))
 print("Ravel order 'F': ",np.ravel(var2,order="F"))
 print("Ravel order 'K': ",np.ravel(var2,order="K"))
 print("Ravel order 'C': ",np.ravel(var2,order="C"))
+print()
+
+# Lecture 17
+# Numpy insert and delete arrays function.
+# 1. for 1D array. 
+import numpy as np
+var=np.array([4,5,8,2,5])
+print("1D array: ",var)
+v1=np.insert(var,3,50) # insert(arrayname,position,value)
+v2=np.insert(var,(3,4),50)
+v3=np.insert(var,(3,4),8.9) #it will not accept float value.
+print("insert 50 in the array: ",v1)
+print("insert 50 in the array: ",v2)
+print("insert 8.9 in the array: ",v3)
+print("it will not accept float value")
+print()
+# for 2D array. 
+var_2=np.array([[3,4,5],[7,3,8]])
+v4=np.insert(var_2,2,10,axis=0) # insert(arrayname,position,value,axis)
+v5=np.insert(var_2,2,10,axis=1) 
+v6=np.insert(var_2,2,[10,6],axis=1)# insert multiple values.
+v7=np.insert(var_2,2,[10,5,8],axis=0) 
+print("2D array:",var_2)
+print("insert value in 2D array along axis=0:",v4)
+print("insert value in 2D array along axis=1:",v5)
+print("insert multiple value in 2D array along axis=1:",v6)
+print("insert multiple value in 2D array along axis=1:",v7)
+print()
+# insert data through append function.
+# for 1D array.
+var=np.array([4,5,8,2,5])
+print("1D array: ",var)
+x=np.append(var,6.5)
+print("append value in 1D array: ",x)
+print()
+# for 2D array.
+var_2=np.array([[3,4,5],[7,3,8]])
+print("2D array:",var_2)
+x1=np.append(var_2,[[65,78,43]],axis=0)
+print("append multiple value in 1D array: ",x1)
+print()
+# Delete function.
+# for 1D array.
+var=np.array([4,5,8,2,5])
+print("1D array: ",var)
+d=np.delete(var,2)
+print("delete perticular value from array:",d)

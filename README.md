@@ -22,7 +22,7 @@ The purpose of this repository is to:
 - Practice NumPy concepts
 - Build a strong foundation for Data Science
 - Prepare for Machine Learning projects
-  # Authonr
+  # Author
   Nehal Dwivedi
    - B.Tech CSE (2023–2027)
    - Learning Data Science and Machine Learning
